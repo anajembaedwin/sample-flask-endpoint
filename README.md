@@ -23,7 +23,7 @@ The information required includes:
   "github_repo_url": "https://github.com/username/repo",
   "status_code": 200
 }
-
+```
 
 # Acceptance Criteria
 1. **Endpoint Creation**:
