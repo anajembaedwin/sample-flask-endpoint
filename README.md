@@ -65,7 +65,7 @@ The information required includes:
     - Check the returned JSON against the defined format.
     - Validate the correctness of each data point in the JSON response.
 
-# Result
+# Local Development Result
 ## Expected GET parameter:
 
 [http://localhost:5000/api?slack_name=isommie&track=backend](http://localhost:5000/api?slack_name=isommie&track=backend)
@@ -83,3 +83,4 @@ The information required includes:
   "utc_time": "2023-09-08T21:56:56Z"
 }
 ```
+
