@@ -13,6 +13,8 @@ The information required includes:
 - The GitHub URL of the full source code.
 - A Status Code of Success
 
+## Example
+
 ```json
 {
   "slack_name": "example_name",
@@ -62,3 +64,22 @@ The information required includes:
     - Ensure the endpoint is accessible.
     - Check the returned JSON against the defined format.
     - Validate the correctness of each data point in the JSON response.
+
+# Result
+## Expected GET parameter:
+
+[http://localhost:5000/api?slack_name=isommie&track=backend](http://localhost:5000/api?slack_name=isommie&track=backend)
+
+## Expected JSON response:
+
+```json
+{
+  "current_day": "Friday",
+  "github_file_url": "https://github.com/anajembaedwin/sample-flask-endpoint/blob/main/app.py",
+  "github_repo_url": "https://github.com/anajembaedwin/sample-flask-endpoint",
+  "slack_name": "isommie",
+  "status_code": 200,
+  "track": "backend",
+  "utc_time": "2023-09-08T21:56:56Z"
+}
+```

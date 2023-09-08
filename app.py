@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route('/api')
 def api():
-    slack_name = request.args.get('isommie')
-    track = request.args.get('backend')
+    slack_name = request.args.get('slack_name')
+    track = request.args.get('track')
     current_day = datetime.utcnow().strftime('%A')
     utc_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-    github_file_url = 'https://github.com/username/repo/blob/main/app.py'
-    github_repo_url = 'https://github.com/username/repo'
+    github_file_url = 'https://github.com/anajembaedwin/sample-flask-endpoint/blob/main/app.py'
+    github_repo_url = 'https://github.com/anajembaedwin/sample-flask-endpoint'
     status_code = 200
     response = {
         'slack_name': slack_name,
@@ -22,6 +22,7 @@ def api():
         'status_code': status_code
     }
     return jsonify(response)
+    
 
 if __name__ == '__main__':
     app.run()
