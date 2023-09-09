@@ -13,7 +13,7 @@ def api():
     github_file_url = 'https://github.com/anajembaedwin/sample-flask-endpoint/blob/main/app.py'
     github_repo_url = 'https://github.com/anajembaedwin/sample-flask-endpoint'
     status_code = 200
-    response = {
+    data = {
         'slack_name': slack_name,
         'current_day': current_day,
         'utc_time': utc_time,
@@ -22,7 +22,22 @@ def api():
         'github_repo_url': github_repo_url,
         'status_code': status_code
     }
-    return jsonify(response)
+
+    # response = {
+    #     'slack_name': slack_name,
+    #     'current_day': current_day,
+    #     'utc_time': utc_time,
+    #     'track': track,
+    #     'github_file_url': github_file_url,
+    #     'github_repo_url': github_repo_url,
+    #     'status_code': status_code
+    # }
+
+    response = jsonify(data)
+
+    response.headers['Content-Type'] = 'application/json'
+
+    return response
     
 
 if __name__ == '__main__':
