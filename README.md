@@ -65,7 +65,7 @@ The information required includes:
     - Check the returned JSON against the defined format.
     - Validate the correctness of each data point in the JSON response.
 
-# Local Development Result
+# Local Development Server
 ## Expected GET parameter:
 
 [http://localhost:5000/api?slack_name=isommie&track=backend](http://localhost:5000/api?slack_name=isommie&track=backend)
@@ -84,3 +84,21 @@ The information required includes:
 }
 ```
 
+# Live Production Server
+## Expected GET parameter:
+
+[https://sample-flask-endpoint.onrender.com/api?isommie=example_name&track=backend](https://sample-flask-endpoint.onrender.com/api?isommie=example_name&track=backend)
+
+## Expected JSON response:
+
+```json
+{
+  "current_day": "Friday",
+  "github_file_url": "https://github.com/anajembaedwin/sample-flask-endpoint/blob/main/app.py",
+  "github_repo_url": "https://github.com/anajembaedwin/sample-flask-endpoint",
+  "slack_name": "isommie",
+  "status_code": 200,
+  "track": "backend",
+  "utc_time": "2023-09-08T21:56:56Z"
+}
+```
