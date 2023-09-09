@@ -87,7 +87,7 @@ The information required includes:
 # Live Production Server
 ## Expected GET parameter:
 
-[https://sample-flask-endpoint.onrender.com/api?isommie=example_name&track=backend](https://sample-flask-endpoint.onrender.com/api?isommie=example_name&track=backend)
+[https://sample-flask-endpoint.onrender.com/api?slack_name=isommie&track=backend](https://sample-flask-endpoint.onrender.com/api?slack_name=isommie&track=backend)
 
 ## Expected JSON response:
 
